@@ -26,7 +26,7 @@ structure = Bio.PDB.PDBParser().get_structure(id, file)
 chain = structure[0]
 
 #Przypisywanie wartosci w macierzy odleglosci z 2 argumentami dla lancuchow
-distance_matrix = fill_distance_matrix(chain["A"], chain["B"])
+distance_matrix = fill_distance_matrix(chain["A"], chain["A"])
 
 #Wypelnienie mapy kontaktow zerami
 protein_contact_map = numpy.zeros((len(distance_matrix), len(distance_matrix)), numpy.single)
